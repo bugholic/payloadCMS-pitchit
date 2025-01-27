@@ -1,7 +1,7 @@
 import { CollectionConfig } from 'payload'
 
-const Startups: CollectionConfig = {
-  slug: 'startups',
+export const Startup: CollectionConfig = {
+  slug: 'startup',
   fields: [
     {
       name: 'title',
@@ -28,12 +28,12 @@ const Startups: CollectionConfig = {
       type: 'text',
       required: true,
     },
-    // {
-    //   name: 'author',
-    //   type: 'relationship',
-    //   relationTo: 'users', // Assuming the "users" collection exists
-    //   required: true,
-    // },
+    {
+      name: 'author',
+      type: 'relationship',
+      relationTo: 'author',
+      required: true,
+    },
     {
       name: 'pitch',
       type: 'textarea',
@@ -41,5 +41,3 @@ const Startups: CollectionConfig = {
     },
   ],
 }
-
-export default Startups

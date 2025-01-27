@@ -12,7 +12,7 @@ export interface Config {
   };
   collections: {
     author: Author;
-    startups: Startup;
+    startup: Startup;
     media: Media;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -21,7 +21,7 @@ export interface Config {
   collectionsJoins: {};
   collectionsSelect: {
     author: AuthorSelect<false> | AuthorSelect<true>;
-    startups: StartupsSelect<false> | StartupsSelect<true>;
+    startup: StartupSelect<false> | StartupSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -101,7 +101,7 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "startups".
+ * via the `definition` "startup".
  */
 export interface Startup {
   id: string;
@@ -110,6 +110,7 @@ export interface Startup {
   category: string;
   image: string;
   slug: string;
+  author: number | Author;
   pitch: string;
   updatedAt: string;
   createdAt: string;
@@ -126,7 +127,7 @@ export interface PayloadLockedDocument {
         value: number | Author;
       } | null)
     | ({
-        relationTo: 'startups';
+        relationTo: 'startup';
         value: string | Startup;
       } | null)
     | ({
@@ -197,14 +198,15 @@ export interface AuthorSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "startups_select".
+ * via the `definition` "startup_select".
  */
-export interface StartupsSelect<T extends boolean = true> {
+export interface StartupSelect<T extends boolean = true> {
   title?: T;
   description?: T;
   category?: T;
   image?: T;
   slug?: T;
+  author?: T;
   pitch?: T;
   updatedAt?: T;
   createdAt?: T;

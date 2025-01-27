@@ -15,35 +15,35 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
+    "@auth/core": "^0.37.4",
     "@payloadcms/db-mongodb": "latest",
-    "@payloadcms/next": "latest",
+    "@payloadcms/next": "^3.18.0",
     "@payloadcms/payload-cloud": "latest",
     "@payloadcms/richtext-lexical": "latest",
     "@tailwindcss/postcss": "^4.0.0",
+    "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
+    "eslint": "^9.19.0",
     "graphql": "^16.8.1",
     "lucide-react": "^0.474.0",
-    "next": "15.1.5",
-    "next-auth": "^4.24.11",
+    "next": "13.4.19",
+    "next-auth": "5.0.0-beta.25",
     "payload": "latest",
-    "postcss": "^8.5.1",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "sharp": "0.32.6",
-    "tailwind-merge": "^2.6.0",
-    "tailwindcss": "^4.0.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "^0.32.6",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@types/node": "^22.5.4",
-    "@types/react": "19.0.7",
-    "@types/react-dom": "19.0.3",
-    "eslint": "^9.16.0",
-    "eslint-config-next": "15.1.5",
+    "@types/node": "^18.19.74",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "postcss": "^8.5.1",
     "prettier": "^3.4.2",
-    "typescript": "5.7.3"
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.2.2"
   },
   "engines": {
-    "node": "^18.20.2 || >=20.9.0"
+    "node": ">=18.12.1"
   }
 }

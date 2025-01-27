@@ -1,4 +1,5 @@
 import { Author } from './author'
-import Startup from './startup'
+import { Media } from './Media'
+import { Startup } from './startup'
 
-export default [Author, Startup]
+export default [Author, Startup, Media]
