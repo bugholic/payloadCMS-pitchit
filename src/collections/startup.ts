@@ -28,12 +28,12 @@ export const Startup: CollectionConfig = {
       type: 'text',
       required: true,
     },
-    {
-      name: 'author',
-      type: 'relationship',
-      relationTo: 'author',
-      required: true,
-    },
+    // {
+    //   name: 'author',
+    //   type: 'relationship',
+    //   relationTo: 'author',
+    //   required: true,
+    // },
     {
       name: 'pitch',
       type: 'textarea',
